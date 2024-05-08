@@ -1,0 +1,28 @@
+{
+  "name": "sui-explorer-local",
+  "version": "0.1.0",
+  "description": "Sui Explorer for Localnet",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js start",
+    "stop": "node index.js stop",
+    "rebuild": "node index.js rebuild"
+  },
+  "keywords": [
+    "cli",
+    "sui",
+    "sui-explorer",
+    "localnet"
+  ],
+  "author": "Konstantin Komelin <konstantin.komelin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "command-exists": "^1.2.9",
+    "commander": "^12.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
