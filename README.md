@@ -11,39 +11,34 @@ Uses an unofficial fork of the Sui Explorer https://github.com/kkomelin/sui-expl
 ## Install
 
 ```bash
-git clone kkomelin/sui-explorer-docker
+# globally
+npm install -g sui-explorer-local
+# or to your project:
+npm install -D sui-explorer-local
 ```
 
 ## Use
 
-Go to the folder:
+Start (on [http://localhost:9001/](http://localhost:9001/)):
 
 ```bash
-cd sui-explorer-docker
+sui-explorer-local start
 ```
 
-Run it:
+Stop:
 
 ```bash
-docker compose up -d
+sui-explorer-local stop
 ```
-
-Open it:
-
-[http://localhost:9001/](http://localhost:9001/)
-
 
 ## Other commands
-
-Stop it:
-
-```bash
-docker compose stop
-```
 
 Rebuild the container in case of any issues:
 
 ```bash
-docker compose up -d --force-recreate --build
+sui-explorer-local rebuild
 ```
 
+## Usage examples
+
+It's integrated into [Sui dApp Starter](https://github.com/kkomelin/sui-dapp-starter).
