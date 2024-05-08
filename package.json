@@ -1,6 +1,6 @@
 {
   "name": "sui-explorer-local",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Sui Explorer for Localnet",
   "repository": {
     "type": "git",
