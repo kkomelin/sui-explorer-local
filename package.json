@@ -1,7 +1,11 @@
 {
   "name": "sui-explorer-local",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Sui Explorer for Localnet",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkomelin/sui-explorer-local.git"
+  },
   "main": "index.js",
   "type": "module",
   "bin": {
@@ -22,5 +26,8 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "bugs": {
+    "url": "https://github.com/kkomelin/sui-explorer-local/issues"
   }
 }
