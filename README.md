@@ -1,6 +1,6 @@
 # Sui Explorer for Localnet
 
-Uses an [unofficial fork](https://github.com/kkomelin/sui-explorer/tree/after-fork) of the Sui Explorer, which was originally built by [@MystenLabs](https://github.com/MystenLabs) and now it's not actively developed.
+Uses an [unofficial fork](https://github.com/kkomelin/sui-explorer/tree/after-fork) of Sui Explorer, which was originally built by [@MystenLabs](https://github.com/MystenLabs) and now it's not actively developed.
 
 ![Sui Explorer for Localnet: Screenshot](https://repository-images.githubusercontent.com/797627100/4b573a30-32b8-4725-b101-bbeb70883470)
 
