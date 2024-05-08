@@ -4,10 +4,8 @@
   "description": "Sui Explorer for Localnet",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "start": "node index.js start",
-    "stop": "node index.js stop",
-    "rebuild": "node index.js rebuild"
+  "bin": {
+    "sui-explorer-local": "./index.js"
   },
   "keywords": [
     "cli",
