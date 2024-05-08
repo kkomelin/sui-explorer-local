@@ -1,6 +1,6 @@
 # Sui Explorer for Localnet
 
-Uses an [unofficial fork](https://github.com/kkomelin/sui-explorer/tree/after-fork) of Sui Explorer, which was originally built by [@MystenLabs](https://github.com/MystenLabs) and now it's not actively developed.
+Uses an [unofficial fork](https://github.com/kkomelin/sui-explorer/tree/after-fork) of Sui Explorer, which was originally built by [MystenLabs](https://github.com/MystenLabs) and now it's not actively developed.
 
 ![Sui Explorer for Localnet: Screenshot](https://repository-images.githubusercontent.com/797627100/4b573a30-32b8-4725-b101-bbeb70883470)
 
@@ -46,6 +46,6 @@ It's integrated into [Sui dApp Starter](https://github.com/kkomelin/sui-dapp-sta
 
 ## Copyrights, Licenses and Credits
 
-All credits go to [@MystenLabs](https://github.com/MystenLabs) for their original version or [Sui Explorer](https://github.com/MystenLabs/sui-explorer) (Apache-2.0) 
+All credits go to [MystenLabs](https://github.com/MystenLabs) for their original version or [Sui Explorer](https://github.com/MystenLabs/sui-explorer) (Apache-2.0) 
 
 Current project is just a tool that delivers a [slightly adapted version](https://github.com/kkomelin/sui-explorer/tree/after-fork) of Sui Explorer to your local machine.
