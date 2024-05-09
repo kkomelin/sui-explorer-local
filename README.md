@@ -40,6 +40,14 @@ Rebuild the container in case of any issues:
 sui-explorer-local rebuild
 ```
 
+## Debug
+
+You can use `-v` or `--verbose` flag to display logs for any command this way::
+
+```bash
+sui-explorer-local rebuild -v
+```
+
 ## Usage examples
 
 It's integrated into [Sui dApp Starter](https://github.com/kkomelin/sui-dapp-starter).
