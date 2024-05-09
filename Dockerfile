@@ -35,4 +35,4 @@ USER node
 EXPOSE 9001
 
 # Run the application.
-CMD pnpm dlx serve ./sui-explorer-after-fork/apps/explorer/build -p 9001
+CMD pnpm dlx serve -s ./sui-explorer-after-fork/apps/explorer/build -p 9001
