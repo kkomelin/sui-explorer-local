@@ -42,7 +42,7 @@ sui-explorer-local rebuild
 
 ## Debug
 
-You can use `-v` or `--verbose` flag to display logs for any command this way::
+To display logs for any command, pass `-v` or `--verbose` param to any command this way:
 
 ```bash
 sui-explorer-local rebuild -v
