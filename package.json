@@ -15,6 +15,7 @@
     "cli",
     "sui",
     "sui-explorer",
+    "sui-explorer-local",
     "localnet"
   ],
   "author": "Konstantin Komelin <konstantin.komelin@gmail.com>",
