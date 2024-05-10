@@ -1,6 +1,6 @@
-# Sui Explorer for Localnet
+# Local Sui Explorer: Cli
 
-Uses an [unofficial fork](https://github.com/kkomelin/sui-explorer/tree/after-fork) of Sui Explorer, which was originally built by [MystenLabs](https://github.com/MystenLabs) and now it's not actively developed.
+A Cli tool that delivers a [slightly adapted version](https://github.com/kkomelin/sui-explorer) of the discontinued [Sui Explorer](https://github.com/MystenLabs/sui-explorer) to your local machine.
 
 ![Sui Explorer for Localnet: Screenshot](https://repository-images.githubusercontent.com/797627100/4b573a30-32b8-4725-b101-bbeb70883470)
 
@@ -34,6 +34,12 @@ sui-explorer-local stop
 
 ## Other commands
 
+Restart the container:
+
+```bash
+sui-explorer-local restart
+```
+
 Rebuild the container in case of any issues:
 
 ```bash
@@ -52,8 +58,10 @@ sui-explorer-local rebuild -v
 
 It's integrated into [Sui dApp Starter](https://github.com/kkomelin/sui-dapp-starter).
 
-## Copyrights, Licenses and Credits
+## License and copyright
 
-All credits go to [MystenLabs](https://github.com/MystenLabs) for their original version or [Sui Explorer](https://github.com/MystenLabs/sui-explorer) (Apache-2.0) 
+Original version of [Sui Explorer](https://github.com/MystenLabs/sui-explorer) - &copy; [MystenLabs](https://github.com/MystenLabs), Apache-2.0
 
-Current project is just a tool that delivers a [slightly adapted version](https://github.com/kkomelin/sui-explorer/tree/after-fork) of Sui Explorer to your local machine.
+[Local Sui Explorer: Cli](https://github.com/kkomelin/sui-explorer-local) - &copy; [Konstantin Komelin](https://github.com/kkomelin), MIT
+
+[Fork](https://github.com/kkomelin/sui-explorer) of Sui Explorer, which is used by the Cli - Apache-2.0

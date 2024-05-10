@@ -1,7 +1,7 @@
 {
   "name": "sui-explorer-local",
-  "version": "0.1.6",
-  "description": "Sui Explorer for Localnet",
+  "version": "0.2.0",
+  "description": "Local Sui Explorer: Cli",
   "repository": {
     "type": "git",
     "url": "https://github.com/kkomelin/sui-explorer-local.git"

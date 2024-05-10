@@ -47,6 +47,19 @@ const main = async () => {
     });
 
   program
+    .command("restart")
+    .description(`Restart ${APP_NAME}`)
+    .option("-v, --verbose", "display logs")
+    .action((options) => {
+      performAction(
+        `docker compose -f ${cliDirectory}/compose.yml restart`,
+        `${APP_NAME} restarted`,
+        `Could not restart ${APP_NAME}`,
+        options.verbose
+      );
+    });
+
+  program
     .command("rebuild")
     .description(`Rebuild the ${APP_NAME} app in case of any issues`)
     .option("-v, --verbose", "display logs")

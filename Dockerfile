@@ -21,11 +21,10 @@ RUN apk update && \
     unzip \
     wget
 
-RUN wget https://github.com/kkomelin/sui-explorer/archive/refs/heads/after-fork.zip && \
-    unzip after-fork.zip && \
-    cd ./sui-explorer-after-fork && \
+RUN wget https://github.com/kkomelin/sui-explorer/archive/refs/heads/main.zip && \
+    unzip main.zip && \
+    cd ./sui-explorer-main && \
     pnpm install && \
-    cd ./apps/explorer && \
     pnpm build
 
 #Run the application as a non-root user.
@@ -34,5 +33,7 @@ USER node
 # Expose the port that the application listens on.
 EXPOSE 9001
 
+WORKDIR /usr/src/app/sui-explorer-main
+
 # Run the application.
-CMD pnpm dlx serve -s ./sui-explorer-after-fork/apps/explorer/build -p 9001
+CMD pnpm serve -p 9001

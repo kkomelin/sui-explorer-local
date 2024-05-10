@@ -4,7 +4,5 @@ services:
     build: 
       context: ./
       dockerfile: Dockerfile
-    environment:
-      - VITE_NETWORK:LOCAL
     ports:
       - 9001:9001
