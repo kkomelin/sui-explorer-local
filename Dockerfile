@@ -21,6 +21,9 @@ RUN apk update && \
     unzip \
     wget
 
+# Used in combination with the corresponding build flag to skip cache for the commands below.
+ARG VERSION=v0.0.0
+
 RUN wget https://github.com/kkomelin/sui-explorer/archive/refs/heads/main.zip && \
     unzip main.zip && \
     cd ./sui-explorer-main && \
