@@ -4,5 +4,6 @@ services:
     build: 
       context: ./
       dockerfile: Dockerfile
+      no_cache: true
     ports:
       - 9001:9001
