@@ -13,9 +13,9 @@ A Cli tool that delivers a [slightly adapted version](https://github.com/kkomeli
 
 ```bash
 # globally
-npm install -g sui-explorer-local
+npm install -g sui-explorer-local@latest
 # or to your project:
-npm install -D sui-explorer-local
+npm install -D sui-explorer-local@latest
 ```
 
 ## Use
