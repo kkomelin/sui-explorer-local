@@ -4,11 +4,14 @@ import chalk from "chalk";
 import { execSync } from "child_process";
 import commandExists from "command-exists";
 import { Command } from "commander";
+import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "url";
 
 const APP_NAME = "Local Sui Explorer";
 const APP_URL = "http://localhost:9001";
+const REPORT_ISSUE_URL =
+  "https://github.com/kkomelin/sui-explorer-local/issues/new";
 
 const main = async () => {
   // Make sure Docker is installed.
@@ -18,7 +21,10 @@ const main = async () => {
 
   const program = new Command();
 
-  program.name("sui-explorer-local").description(`Easily manage ${APP_NAME}`);
+  program
+    .name("sui-explorer-local")
+    .description(`Easily manage ${APP_NAME}`)
+    .version(getPackageVersion());
 
   const cliDirectory = getCliDirectory();
 
@@ -91,6 +97,22 @@ const checkDocker = async () => {
 const getCliDirectory = () => {
   const currentFileUrl = import.meta.url;
   return path.dirname(decodeURI(fileURLToPath(currentFileUrl)));
+};
+
+const getPackageVersion = () => {
+  try {
+    const packageFile = readFileSync(
+      path.join(getCliDirectory() + "/package.json")
+    );
+    const packageMeta = JSON.parse(packageFile);
+    return packageMeta.version;
+  } catch (e) {
+    displayErrorMessage(
+      `Cannot read package meta-data. Please report the issue ${REPORT_ISSUE_URL}`
+    );
+    console.error(e);
+    process.exit(1);
+  }
 };
 
 const performAction = (command, successMessage, errorMessage, verbose) => {
