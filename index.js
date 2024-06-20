@@ -102,7 +102,8 @@ const getCliDirectory = () => {
 const getPackageVersion = () => {
   try {
     const packageFile = readFileSync(
-      path.join(getCliDirectory() + "/package.json")
+      path.join(getCliDirectory(), "/package.json"),
+      "utf8"
     );
     const packageMeta = JSON.parse(packageFile);
     return packageMeta.version;
