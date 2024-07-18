@@ -1,12 +1,11 @@
 # Local Sui Explorer: Cli
 
-A Cli tool that delivers a [slightly adapted version](https://github.com/kkomelin/sui-explorer) of the discontinued [Sui Explorer](https://github.com/MystenLabs/sui-explorer) to your local machine.
+A Cli tool that delivers an [adapted version](https://github.com/kkomelin/sui-explorer) of the discontinued [Sui Explorer](https://github.com/MystenLabs/sui-explorer) to your local machine.
 
 ![Sui Explorer for Localnet: Screenshot](https://repository-images.githubusercontent.com/797627100/052271ab-2ee5-4560-8c24-bda45edb608c)
 
 ## Requirements
 
-- [Docker](https://docs.docker.com/engine/install/)
 - [Node (>= v20)](https://nodejs.org/en/download/)
 
 ## Install
@@ -32,26 +31,18 @@ Stop:
 sui-explorer-local stop
 ```
 
-## Other commands
-
-Restart the container:
+Restart:
 
 ```bash
 sui-explorer-local restart
 ```
 
-Rebuild the container in case of any issues:
+## Troubleshot
+
+To display logs, run this command:
 
 ```bash
-sui-explorer-local rebuild
-```
-
-## Debug
-
-To display logs for any command, pass `-v` or `--verbose` param to any command this way:
-
-```bash
-sui-explorer-local rebuild -v
+sui-explorer-local logs
 ```
 
 ## Usage examples

@@ -2,7 +2,6 @@
 
 import chalk from "chalk";
 import { execSync } from "child_process";
-import commandExists from "command-exists";
 import { Command } from "commander";
 import { readFileSync } from "node:fs";
 import path from "node:path";
@@ -14,9 +13,6 @@ const REPORT_ISSUE_URL =
   "https://github.com/kkomelin/sui-explorer-local/issues/new";
 
 const main = async () => {
-  // Make sure Docker is installed.
-  await checkDocker();
-
   // Commands.
 
   const program = new Command();
@@ -34,7 +30,7 @@ const main = async () => {
     .option("-v, --verbose", "display logs")
     .action((options) => {
       performAction(
-        `docker compose -f ${cliDirectory}/compose.yml up -d`,
+        `npx pm2 start ${cliDirectory}/pm2.config.cjs`,
         `${APP_NAME} started on ${APP_URL}`,
         `Could not start ${APP_NAME}`,
         options.verbose
@@ -47,7 +43,7 @@ const main = async () => {
     .option("-v, --verbose", "display logs")
     .action((options) => {
       performAction(
-        `docker compose -f ${cliDirectory}/compose.yml down`,
+        `npx pm2 stop ${cliDirectory}/pm2.config.cjs`,
         `${APP_NAME} stopped`,
         `Could not stop ${APP_NAME}`,
         options.verbose
@@ -60,38 +56,23 @@ const main = async () => {
     .option("-v, --verbose", "display logs")
     .action((options) => {
       performAction(
-        `docker compose -f ${cliDirectory}/compose.yml restart`,
-        `${APP_NAME} restarted`,
+        `npx pm2 restart ${cliDirectory}/pm2.config.cjs`,
+        `${APP_NAME} restarted on ${APP_URL}`,
         `Could not restart ${APP_NAME}`,
         options.verbose
       );
     });
 
   program
-    .command("rebuild")
-    .description(`Rebuild the ${APP_NAME} app in case of any issues`)
-    .option("-v, --verbose", "display logs")
+    .command("logs")
+    .description(`Display logs for ${APP_NAME}`)
     .action((options) => {
-      performAction(
-        `docker compose -f ${cliDirectory}/compose.yml up -d --force-recreate --build`,
-        `${APP_NAME} rebuilt on ${APP_URL}`,
-        `Could not rebuild ${APP_NAME}`,
-        options.verbose
-      );
+      execSync(`npx pm2 logs sui-explorer-local --nostream`, {
+        stdio: "inherit",
+      });
     });
 
   program.parse();
-};
-
-const checkDocker = async () => {
-  try {
-    await commandExists("docker");
-  } catch {
-    displayErrorMessage(
-      "Docker not found. Please install https://docs.docker.com/get-docker/"
-    );
-    process.exit(1);
-  }
 };
 
 const getCliDirectory = () => {

@@ -1,6 +1,6 @@
 {
   "name": "sui-explorer-local",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Local Sui Explorer: Cli",
   "repository": {
     "type": "git",
@@ -22,8 +22,8 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^5.3.0",
-    "command-exists": "^1.2.9",
-    "commander": "^12.0.0"
+    "commander": "^12.0.0",
+    "sui-explorer": "kkomelin/sui-explorer#single-file-build"
   },
   "engines": {
     "node": ">=20"
