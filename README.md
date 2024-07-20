@@ -1,6 +1,6 @@
 # Local Sui Explorer: Cli
 
-A Cli tool that delivers an [adapted version](https://github.com/kkomelin/sui-explorer) of the discontinued [Sui Explorer](https://github.com/MystenLabs/sui-explorer) to your local machine.
+A Cli tool that delivers an [Local Sui Explorer](https://github.com/kkomelin/sui-explorer) to your local machine.
 
 ![Sui Explorer for Localnet: Screenshot](https://repository-images.githubusercontent.com/797627100/052271ab-2ee5-4560-8c24-bda45edb608c)
 

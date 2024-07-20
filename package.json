@@ -23,7 +23,7 @@
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^12.1.0",
-    "sui-explorer": "kkomelin/sui-explorer#single-file-build"
+    "sui-explorer": "kkomelin/sui-explorer"
   },
   "engines": {
     "node": ">=20"
