@@ -1,5 +1,12 @@
 # Local Sui Explorer: Cli
 
+---
+
+__This project was integrated into the main [Local Sui Explorer](https://github.com/kkomelin/sui-explorer) project,
+so please use it instead.__
+
+---
+
 A Cli tool that delivers [Local Sui Explorer](https://github.com/kkomelin/sui-explorer) to your local machine.
 
 ![Sui Explorer for Localnet: Screenshot](https://repository-images.githubusercontent.com/797627100/052271ab-2ee5-4560-8c24-bda45edb608c)
